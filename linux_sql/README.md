@@ -1,103 +1,112 @@
-````markdown
 # Linux Cluster Monitoring Agent
 
 ## Introduction
-This project is designed to monitor and log hardware and system usage metrics for Linux servers in a cluster. It helps system administrators and DevOps teams track CPU, memory, and disk performance over time. The system is built using Bash scripts for data collection, PostgreSQL as the backend database, Docker to host the database, and Git for version control. The main users are administrators who want a simple and scalable solution to monitor multiple servers and analyze performance trends.
+
+This project implements a Linux Cluster Monitoring Agent that helps collect and monitor hardware and resource usage data from Linux servers. The main goal is to allow system administrators and DevOps engineers to track CPU, memory, and disk performance in real-time. The system is designed to scale across multiple servers in a distributed environment. It uses Bash scripts to gather server information, Docker to run a PostgreSQL database, and Git for version control. The primary users are IT teams responsible for server maintenance and performance monitoring.
 
 ## Quick Start
+
 ```bash
-# Start a PostgreSQL Docker container
+# Start PostgreSQL instance using Docker
 ./scripts/psql_docker.sh create [db_username] [db_password]
 
-# Create tables using ddl.sql
+# Create tables in the database
 psql -h localhost -U [db_username] -d host_agent -f sql/ddl.sql
 
-# Insert hardware specifications into the DB
+# Insert hardware specifications data into the database
 ./scripts/host_info.sh localhost 5432 host_agent [db_username] [db_password]
 
-# Insert real-time hardware usage data into the DB
+# Insert real-time hardware usage data
 ./scripts/host_usage.sh localhost 5432 host_agent [db_username] [db_password]
 
-# Set up crontab for periodic data collection
+# Setup crontab to automate data collection
 crontab -e
 * * * * * bash /full/path/to/scripts/host_usage.sh localhost 5432 host_agent [db_username] [db_password] > /tmp/host_usage.log
-````
+```
 
 ## Implementation
 
-The project collects static hardware information once per host and dynamic usage metrics at periodic intervals. The scripts insert collected data into a PostgreSQL database running inside Docker, which allows for easy deployment and scaling.
+The project collects server hardware information and real-time resource usage metrics and stores them in a PostgreSQL database running inside Docker. Bash scripts are used to extract data from system files and Linux commands. Crontab automates the periodic collection of metrics. All development and version control are handled using Git.
 
 ### Architecture
 
-Create a cluster diagram with three Linux hosts running monitoring agents, all reporting to a central PostgreSQL database. Save the diagram as `assets/cluster_diagram.png`.
+Create a cluster diagram with three Linux hosts, a PostgreSQL DB, and agents. Save the diagram in the `assets` directory.
 
 ### Scripts
 
-* **psql_docker.sh**: Creates, starts, or stops the PostgreSQL Docker container.
+* **psql_docker.sh**
 
 ```bash
+# Create, start, or stop PostgreSQL Docker container
 ./scripts/psql_docker.sh create [db_username] [db_password]
 ./scripts/psql_docker.sh start
 ./scripts/psql_docker.sh stop
 ```
 
-* **host_info.sh**: Collects hardware specifications and inserts into the `host_info` table.
+* **host_info.sh**
 
 ```bash
+# Collect hardware specifications of the host
 ./scripts/host_info.sh [psql_host] [psql_port] [db_name] [psql_user] [psql_password]
 ```
 
-* **host_usage.sh**: Collects dynamic resource usage metrics and inserts into `host_usage` table.
+* **host_usage.sh**
 
 ```bash
+# Collect real-time server usage data
 ./scripts/host_usage.sh [psql_host] [psql_port] [db_name] [psql_user] [psql_password]
 ```
 
-* **crontab**: Automates periodic execution of `host_usage.sh`.
-* **queries.sql**: Contains example analytical queries to monitor trends in CPU, memory, and disk usage across hosts.
+* **crontab**
+
+```bash
+# Automate periodic execution of host_usage.sh
+crontab -e
+* * * * * bash /full/path/to/scripts/host_usage.sh localhost 5432 host_agent [db_username] [db_password] > /tmp/host_usage.log
+```
+
+* **queries.sql**
+  Purpose: To analyze resource utilization trends, identify servers with high CPU or memory usage, and monitor disk performance across the cluster.
 
 ### Database Modeling
 
 #### host_info
 
-| Column Name      | Data Type | Description                     |
-| ---------------- | --------- | ------------------------------- |
-| id               | SERIAL    | Unique identifier for each host |
-| hostname         | VARCHAR   | Name of the host machine        |
-| cpu_number       | INT2      | Number of CPU cores             |
-| cpu_architecture | VARCHAR   | CPU architecture                |
-| cpu_model        | VARCHAR   | CPU model name                  |
-| cpu_mhz          | FLOAT8    | CPU clock speed                 |
-| l2_cache         | INT4      | L2 cache size in KB             |
-| total_mem        | INT4      | Total memory in KB              |
-| timestamp        | TIMESTAMP | Data collection time            |
+| Column Name      | Data Type | Description            |
+| ---------------- | --------- | ---------------------- |
+| id               | SERIAL    | Unique host identifier |
+| hostname         | VARCHAR   | Host machine name      |
+| cpu_number       | INT2      | Number of CPU cores    |
+| cpu_architecture | VARCHAR   | CPU architecture type  |
+| cpu_model        | VARCHAR   | CPU model name         |
+| cpu_mhz          | FLOAT8    | CPU clock speed in MHz |
+| l2_cache         | INT4      | L2 cache size in KB    |
+| total_mem        | INT4      | Total memory in KB     |
+| timestamp        | TIMESTAMP | Record timestamp       |
 
 #### host_usage
 
-| Column Name    | Data Type | Description                 |
-| -------------- | --------- | --------------------------- |
-| timestamp      | TIMESTAMP | Time of metric collection   |
-| host_id        | SERIAL    | Foreign key to host_info.id |
-| memory_free    | INT4      | Free memory in MB           |
-| cpu_idle       | INT2      | CPU idle percentage         |
-| cpu_kernel     | INT2      | CPU kernel usage percentage |
-| disk_io        | INT4      | Disk I/O count              |
-| disk_available | INT4      | Available disk space in MB  |
+| Column Name    | Data Type | Description                          |
+| -------------- | --------- | ------------------------------------ |
+| timestamp      | TIMESTAMP | Time of data collection              |
+| host_id        | SERIAL    | Foreign key referencing host_info.id |
+| memory_free    | INT4      | Free memory in MB                    |
+| cpu_idle       | INT2      | CPU idle percentage                  |
+| cpu_kernel     | INT2      | CPU kernel usage percentage          |
+| disk_io        | INT4      | Disk I/O operations                  |
+| disk_available | INT4      | Available disk space in MB           |
 
 ## Test
 
-Testing was done by creating and dropping tables via `ddl.sql` and verifying correct insertion of hardware and usage data using the scripts. The scripts successfully collected and stored both static and dynamic data.
+Tested the Bash scripts and ddl.sql by creating and dropping tables, then inserting sample data. Verified data correctness using SELECT queries. Result: All scripts worked correctly and data were inserted reliably.
 
 ## Deployment
 
-All project files are managed via GitHub. PostgreSQL runs in a Docker container. Crontab automates periodic execution of `host_usage.sh` for continuous monitoring.
+The project files are managed via GitHub. The PostgreSQL database runs in a Docker container, and crontab automates data collection for server metrics.
 
 ## Improvements
 
-* Automatically update hardware data if server configuration changes.
-* Integrate a monitoring dashboard for visualization of metrics.
-* Add alerting for abnormal resource usage.
-
-```
-```
-
+* Handle dynamic hardware updates automatically.
+* Integrate a visual dashboard for real-time monitoring.
+* Add alerting for resource anomalies and failures.
+* Enable automated backups of the PostgreSQL database.
