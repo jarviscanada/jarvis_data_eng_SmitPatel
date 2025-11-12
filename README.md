@@ -12,32 +12,18 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis a orci ac
 
 ## Jarvis Projects
 
-Project source code: [https://github.com/jarviscanada/jarvis_data_eng_demo](https://github.com/jarviscanada/jarvis_data_eng_demo)
+Project source code: [https://github.com/jarviscanada/jarvis_data_eng_SmitPatel](https://github.com/jarviscanada/jarvis_data_eng_SmitPatel)
 
 
-**Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_demo/tree/master/linux_sql)]: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
+**Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_SmitPatel/tree/master/linux_sql)]: Built a lightweight monitoring agent for a Linux system to collect hardware specifications and real-time usage metrics. Designed Bash scripts to gather CPU, memory, and disk statistics and store them in a PostgreSQL database running inside Docker. Automated periodic data collection using cron and created SQL queries to analyze system performance over time.
 
-**Core Java Apps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_demo/tree/master/core_java)]:
-      
-  - Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.
-  - JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.
-  - Grep App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.
-
-**Springboot App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_demo/tree/master/springboot)]: Not Started
-
-**Python Data Analytics** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_demo/tree/master/python_data_anlytics)]: Not Started
-
-**Hadoop** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_demo/tree/master/hadoop)]: Not Started
-
-**Spark** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_demo/tree/master/spark)]: Not Started
-
-**Cloud/DevOps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_demo/tree/master/cloud_devops)]: Not Started
+**SQL** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_SmitPatel/tree/master/sql)]: Designed and interacted with a relational database schema to strengthen SQL skills through hands-on exercises and data modeling. Installed and configured PostgreSQL in a Docker container and connected it to DBeaver on Rocky Linux to manage and query a club membership database. Practiced writing SQL for schema design, data insertion, updates, deletions, joins, filtering, grouping, subqueries, window functions, and CTEs.
 
 
 ## Highlighted Projects
-**Web app for resturant** [[GitHub](https://github.com/jarviscanada/jarvis_profile_builder)]: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
+**Linux Cluster Monitoring Agent** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_SmitPatel/tree/develop/linux_sql)]: Built a lightweight monitoring agent for a Linux system to collect hardware specifications and real-time usage metrics. Designed Bash scripts to gather CPU, memory, and disk statistics and store them in a PostgreSQL database running inside Docker. Automated periodic data collection using cron and created SQL queries to analyze system performance over time.
 
-**Machine Learning**: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
+**RDBMS and SQL** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_SmitPatel/tree/develop/sql)]: Designed and interacted with a relational database schema to strengthen SQL skills through hands-on exercises and data modeling. Installed and configured PostgreSQL in a Docker container and connected it to DBeaver on Rocky Linux to manage and query a club membership database. Practiced writing SQL for schema design, data insertion, updates, deletions, joins, filtering, grouping, subqueries, window functions, and CTEs.
 
 
 ## Professional Experiences
@@ -48,17 +34,14 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_demo](http
 
 
 ## Education
-**XYZ university (2012-2016)**, Bachelor of Applied Sciences, Electrical and Computer Engineering
-- Scholarship
-- Dean's List (2015, 2016): Ut enim ad minim veniam
-- GPA: 3.8/4.0
+**Gujarat Technological University (2017-2021)**, Bachelor of Computer Enggineering, Computer Engineering
 
-**XYZ university (2016-2018)**, Master of Engineering, Electrical and Computer Engineering
+**Gujarat Technological Universit (2023-2024)**, Maseter of Applied Computing, Faculty of Science
 
 
 ## Miscellaneous
 - Udacity Machine Learning (2019)
 - Winner
-- Basketball player
+- Cricket player
 - Competitive gaming
 - Volunteer, ABC Food bank: Ut enim ad minim veniam
