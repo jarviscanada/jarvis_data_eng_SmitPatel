@@ -115,11 +115,11 @@ others:
     #category
   - title: "Certificates"
     #list of items
-  #   bullets:
-  #     #- "Udacity Machine Learning (2019)"
-  # - title: "Awards"
-  #   bullets:
-  #     #- "Winner"
+    bullets:
+      - ""
+  - title: "Awards"
+    bullets:
+      - "Winner"
   - title: "Activities/Hobbies"
     bullets:
       - "Cricket player"
