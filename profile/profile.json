@@ -1,76 +1,43 @@
 {
   "education": [
     {
-      "awards_achievements": [
-        "Scholarship",
-        "Dean's List (2015, 2016): Ut enim ad minim veniam",
-        "GPA: 3.8/4.0"
-      ],
-      "degree": "Bachelor of Applied Sciences",
-      "department": "Electrical and Computer Engineering",
-      "duration": "2012-2016",
-      "school_name": "XYZ university"
+      "awards_achievements": null,
+      "degree": "Bachelor of Computer Enggineering",
+      "department": "Computer Engineering",
+      "duration": "2017-2021",
+      "school_name": "Gujarat Technological University"
     },
     {
       "awards_achievements": null,
-      "degree": "Master of Engineering",
-      "department": "Electrical and Computer Engineering",
-      "duration": "2016-2018",
-      "school_name": "XYZ university"
+      "degree": "Maseter of Applied Computing",
+      "department": "Faculty of Science",
+      "duration": "2023-2024",
+      "school_name": "Gujarat Technological Universit"
     }
   ],
-  "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_demo",
+  "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_SmitPatel",
   "highlighted_projects": [
     {
-      "description": "Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.",
-      "git_url": "https://github.com/jarviscanada/jarvis_profile_builder",
-      "name": "Web app for resturant"
+      "description": "Built a lightweight monitoring agent for a Linux system to collect hardware specifications and real-time usage metrics. Designed Bash scripts to gather CPU, memory, and disk statistics and store them in a PostgreSQL database running inside Docker. Automated periodic data collection using cron and created SQL queries to analyze system performance over time.",
+      "git_url": "https://github.com/jarviscanada/jarvis_data_eng_SmitPatel/tree/develop/linux_sql",
+      "name": "Linux Cluster Monitoring Agent"
     },
     {
-      "description": "Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.",
-      "git_url": null,
-      "name": "Machine Learning"
+      "description": "Designed and interacted with a relational database schema to strengthen SQL skills through hands-on exercises and data modeling. Installed and configured PostgreSQL in a Docker container and connected it to DBeaver on Rocky Linux to manage and query a club membership database. Practiced writing SQL for schema design, data insertion, updates, deletions, joins, filtering, grouping, subqueries, window functions, and CTEs.",
+      "git_url": "https://github.com/jarviscanada/jarvis_data_eng_SmitPatel/tree/develop/sql",
+      "name": "RDBMS and SQL"
     }
   ],
   "jarvis_projects": [
     {
-      "description": "Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.",
+      "description": "Built a lightweight monitoring agent for a Linux system to collect hardware specifications and real-time usage metrics. Designed Bash scripts to gather CPU, memory, and disk statistics and store them in a PostgreSQL database running inside Docker. Automated periodic data collection using cron and created SQL queries to analyze system performance over time.",
       "git_url": "/linux_sql",
       "name": "Cluster Monitor"
     },
     {
-      "description": [
-        "Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.",
-        "JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.",
-        "Grep App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
-      ],
-      "git_url": "/core_java",
-      "name": "Core Java Apps"
-    },
-    {
-      "description": "",
-      "git_url": "/springboot",
-      "name": "Springboot App"
-    },
-    {
-      "description": "",
-      "git_url": "/python_data_anlytics",
-      "name": "Python Data Analytics"
-    },
-    {
-      "description": "",
-      "git_url": "/hadoop",
-      "name": "Hadoop"
-    },
-    {
-      "description": "",
-      "git_url": "/spark",
-      "name": "Spark"
-    },
-    {
-      "description": "",
-      "git_url": "/cloud_devops",
-      "name": "Cloud/DevOps"
+      "description": "Designed and interacted with a relational database schema to strengthen SQL skills through hands-on exercises and data modeling. Installed and configured PostgreSQL in a Docker container and connected it to DBeaver on Rocky Linux to manage and query a club membership database. Practiced writing SQL for schema design, data insertion, updates, deletions, joins, filtering, grouping, subqueries, window functions, and CTEs.",
+      "git_url": "/sql",
+      "name": "SQL"
     }
   ],
   "name": "Smit Patel",
@@ -89,7 +56,7 @@
     },
     {
       "bullets": [
-        "Basketball player",
+        "Cricket player",
         "Competitive gaming",
         "Volunteer, ABC Food bank: Ut enim ad minim veniam"
       ],
