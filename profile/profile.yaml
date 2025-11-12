@@ -1,7 +1,7 @@
 # Preferred name (Characters only)
 name: "Smit Patel"
 # Your GitHub repo root URL
-github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_demo
+github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_SmitPatel
 
 # Introduce yourself, your academic and professional background.
 # What excites you about the software industry and your passion. At least 80 words
@@ -38,41 +38,41 @@ jarvis_projects:
     git_url: "/linux_sql"
     # The project description allows hiring managers to understand your project and technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
-  - name: "Core Java Apps"
-    git_url: "/core_java"
-    description:
-      - "Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
-      - "JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
-      - "Grep App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
-  - name: "Springboot App"
-    git_url: "/springboot"
-    description: ""
-  - name: "Python Data Analytics"
-    git_url: "/python_data_anlytics"
-    description: ""
-  - name: "Hadoop"
-    git_url: "/hadoop"
-    description: ""
-  - name: "Spark"
-    git_url: "/spark"
-    description: ""
-  - name: "Cloud/DevOps"
-    git_url: "/cloud_devops"
-    description: ""
+    description: Built a lightweight monitoring agent for a Linux system to collect hardware specifications and real-time usage metrics. Designed Bash scripts to gather CPU, memory, and disk statistics and store them in a PostgreSQL database running inside Docker. Automated periodic data collection using cron and created SQL queries to analyze system performance over time.
+  # - name: "Core Java Apps"
+  #   git_url: "/core_java"
+  #   description:
+  #     - "Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
+  #     - "JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
+  #     - "Grep App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
+  # - name: "Springboot App"
+  #   git_url: "/springboot"
+  #   description: ""
+  # - name: "Python Data Analytics"
+  #   git_url: "/python_data_anlytics"
+  #   description: ""
+  # - name: "Hadoop"
+  #   git_url: "/hadoop"
+  #   description: ""
+  # - name: "Spark"
+  #   git_url: "/spark"
+  #   description: ""
+  - name: "SQL"
+    git_url: "/sql"
+    description: "Designed and interacted with a relational database schema to strengthen SQL skills through hands-on exercises and data modeling. Installed and configured PostgreSQL in a Docker container and connected it to DBeaver on Rocky Linux to manage and query a club membership database. Practiced writing SQL for schema design, data insertion, updates, deletions, joins, filtering, grouping, subqueries, window functions, and CTEs."
 
 # List of personal or academic projects
 # Feel free to add more projects
 highlighted_projects:
     #project name
-  - name: "Web app for resturant"
+  - name: "Linux Cluster Monitoring Agent"
     #URL is optional
-    git_url: "https://github.com/jarviscanada/jarvis_profile_builder"
+    git_url: "https://github.com/jarviscanada/jarvis_data_eng_SmitPatel/tree/develop/linux_sql"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
-  - name: "Machine Learning"
-    git_url:
-    description: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
+    description: Built a lightweight monitoring agent for a Linux system to collect hardware specifications and real-time usage metrics. Designed Bash scripts to gather CPU, memory, and disk statistics and store them in a PostgreSQL database running inside Docker. Automated periodic data collection using cron and created SQL queries to analyze system performance over time.
+  - name: "RDBMS and SQL"
+    git_url: "https://github.com/jarviscanada/jarvis_data_eng_SmitPatel/tree/develop/sql"
+    description: Designed and interacted with a relational database schema to strengthen SQL skills through hands-on exercises and data modeling. Installed and configured PostgreSQL in a Docker container and connected it to DBeaver on Rocky Linux to manage and query a club membership database. Practiced writing SQL for schema design, data insertion, updates, deletions, joins, filtering, grouping, subqueries, window functions, and CTEs.
 
 #List of professional experience
 #The job description allows hiring managers to understand your job and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
@@ -91,19 +91,17 @@ professional_experience:
 
 #List of edcuation
 education: 
-  - school_name: "XYZ university"
-    duration: "2012-2016"
-    degree: "Bachelor of Applied Sciences"
-    department: "Electrical and Computer Engineering"
+  - school_name: "Gujarat Technological University"
+    duration: "2017-2021"
+    degree: "Bachelor of Computer Enggineering"
+    department: "Computer Engineering"
     # optional
     awards_achievements: 
-      - "Scholarship"
-      - "Dean's List (2015, 2016): Ut enim ad minim veniam"
-      - "GPA: 3.8/4.0"
-  - school_name: "XYZ university"
-    duration: "2016-2018"
-    degree: "Master of Engineering"
-    department: "Electrical and Computer Engineering"
+
+  - school_name: "Gujarat Technological Universit"
+    duration: "2023-2024"
+    degree: "Maseter of Applied Computing"
+    department: "Faculty of Science"
     awards_achievements: 
 
 #Optional section
@@ -118,6 +116,6 @@ others:
       - "Winner"
   - title: "Activities/Hobbies"
     bullets:
-      - "Basketball player"
+      - "Cricket player"
       - "Competitive gaming"
       - "Volunteer, ABC Food bank: Ut enim ad minim veniam"
