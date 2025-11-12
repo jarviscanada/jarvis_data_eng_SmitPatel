@@ -116,12 +116,10 @@ others:
   - title: "Certificates"
     #list of items
     bullets:
-      - "Udacity Machine Learning (2019)"
+      #- "Udacity Machine Learning (2019)"
   - title: "Awards"
     bullets:
-      - "Winner"
+      #- "Winner"
   - title: "Activities/Hobbies"
     bullets:
       - "Cricket player"
-      - "Competitive gaming"
-      - "Volunteer, ABC Food bank: Ut enim ad minim veniam"
