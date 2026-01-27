@@ -1,82 +1,52 @@
 # JavaGrep
 
-## Overview
-**JavaGrep** is a lightweight, cross-platform command-line tool written in Java. It recursively traverses a directory tree, reads lines from each file, filters them using a user-provided regular expression, and writes the matching lines to an output file.
-
-The project uses **Java 8+ features** like streams and lambdas, **JUnit 5** for testing, and **SLF4J with Log4j** for logging. Maven is used as the build tool, and the project can be packaged as an executable JAR or run via Docker.
-
----
-
-## Features
-- Recursively search files in a directory
-- Supports Java regular expressions
-- Writes matching lines to an output file
-- Unit-tested with JUnit 5
-- Command-line interface for easy usage
-- Logging with SLF4J + Log4j
-
----
-
-## Project Structure
-```
-grep/
-├── data/                 # Sample input files
-├── src/
-│   ├── main/java/ca/jrvs/apps/grep/JavaGrep.java          # Interface
-│   └── main/java/ca/jrvs/apps/grep/JavaGrepImp.java       # Implementation
-│   └── test/java/ca/jrvs/apps/grep/JavaGrepImpTest.java   # JUnit tests
-├── pom.xml               # Maven build configuration
-└── README.md
-```
+## Introduction
+JavaGrep is a lightweight, cross-platform command-line tool inspired by the Linux `grep` command. It allows users to search for lines matching a given regular expression in one or multiple files or directories and write the matching lines to an output file. The project leverages **Core Java**, **Lambda and Stream APIs**, **SLF4J** for logging, and **JUnit 5** for testing. Maven is used for project management, IntelliJ IDEA is the development IDE, and Docker is used for containerized deployment.
 
 ---
 
 ## Quick Start
 
-### 1. Build with Maven
+### Building the App
+1. Clone the project and navigate to the project directory:
+```bash
+cd core_java/grep
+```
+2. Choose the implementation class in `pom.xml`:
+```xml
+<mainClass>ca.jrvs.apps.grep.{JavaGrepImp or JavaGrepLambdaImp}</mainClass>
+```
+3. Build the project with Maven:
 ```bash
 mvn clean package
 ```
-This will produce a **shaded (fat) JAR** in the `target/` directory:
 
-```
-target/JavaGrep-1.0.jar
-```
-
----
-
-### 2. Run from Command Line
+### Running the App
+#### Using the Jar
 ```bash
-java -jar target/JavaGrep-1.0.jar "<regex>" <root-directory> <output-file>
+java -jar target/grep-1.0-SNAPSHOT.jar <regex> <rootDir> <outputFile>
 ```
-
-**Example:**
+Or directly specifying the class:
 ```bash
-java -jar target/JavaGrep-1.0.jar ".*Romeo.*Juliet.*" ./data ./output.txt
+java -cp target/grep-1.0-SNAPSHOT.jar ca.jrvs.apps.grep.{JavaGrepImp or JavaGrepLambdaImp} <regex> <rootDir> <outputFile>
 ```
 
----
-
-### 3. Run with Docker
+#### Using Docker
+1. Build the Docker image:
+```bash
+docker build -t grep:local .
+```
+2. Run the program in the container:
 ```bash
 docker run --rm \
-  -v /path/to/data:/data \
-  -v /path/to/output:/output \
-  your-docker-image-name ".*Romeo.*Juliet.*" /data /output/output.txt
+  -v "$(pwd)"/data:/data \
+  -v "$(pwd)"/out:/out \
+  grep:local <regex> <rootDir> <outputFile>
 ```
 
 ---
 
-## Implementation Details
-- **File Traversal:** Recursive using `java.io.File` API  
-- **File Reading:** `BufferedReader` wrapped around `FileReader`  
-- **Regex Matching:** `Pattern` and `Matcher`  
-- **File Writing:** `BufferedWriter` with `FileWriter`  
-- **Logging:** SLF4J with Log4j backend  
-- **Testing:** JUnit 5 with `@TempDir` for temporary file handling  
-
----
-
+## Implementation
 ### Pseudocode
 ```
 matchedLines = []
@@ -87,36 +57,37 @@ for file in listFilesRecursively(rootDir)
 writeToFile(matchedLines)
 ```
 
+### Details
+- **File Traversal:** Recursive using `java.io.File`
+- **File Reading:** `BufferedReader` with `FileReader`
+- **Regex Matching:** `Pattern` and `Matcher`
+- **File Writing:** `BufferedWriter` with `FileWriter` (can be UTF-8 encoded for consistency)
+- **Logging:** SLF4J with Log4j backend
+- **Streams and Lambda:** Used in the Lambda implementation to reduce memory footprint for large files
+
+---
+
+## Performance Considerations
+The default implementation collects all lines into a list, which may cause heap memory issues for large files. The Lambda/Stream version handles data line-by-line to reduce memory usage.
+
 ---
 
 ## Testing
-- Unit tests cover:
-  - Listing files
-  - Reading file lines
-  - Regex matching
-  - Writing output
-  - End-to-end `process()` method
-
-- Example: `JavaGrepImpTest` creates temporary directories and files, runs `process()`, and verifies output.
+- JUnit 5 is used for unit testing.
+- Tests cover file listing, reading, matching, writing, and the end-to-end `process()` method.
+- Temporary directories and files are used for tests, which are automatically cleaned up after execution.
+- `shakespeare.txt` is used as a sample input for testing.
 
 ---
 
-## Limitations & Improvements
-1. **Large File Handling:** Current implementation reads all lines into memory. Can be improved using streaming without collecting lists.  
-2. **Regex Documentation:** Add examples for common patterns.  
-3. **Configurable Output:** Add JSON/CSV output for integration with other tools.  
-4. **Performance Testing:** Add tests for large file trees and track I/O performance.
+## Deployment
+- **Jar:** Build and distribute the shaded JAR with Maven.
+- **Docker:** Containerized deployment for portability; base image is `eclipse-temurin:8-jdk-alpine`.
 
 ---
 
-## Dependencies
-- Java 8+
-- Maven
-- SLF4J 1.7.28+ (with Log4j)
-- JUnit 5
-
----
-
-## Author
-Smit Patel
-
+## Improvements
+1. Explicitly use **UTF-8 encoding** for reading/writing to ensure consistent behavior across systems.
+2. Improve **error handling** and maintain API consistency, e.g., clarify which methods throw checked exceptions.
+3. Expand **test coverage** to include more scenarios and edge cases.
+4. Optimize performance further for very large files using streaming and avoiding collecting all data in memory.
