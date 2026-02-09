@@ -7,8 +7,25 @@ This analysis was implemented in Python using Pandas, NumPy, and Matplotlib/Seab
 
 # Implementation
 
+## Project Architecture
+
+The architecture of this project is designed to support retail data analytics and customer insights generation for LGS. It captures the flow of data from customers placing orders to actionable insights used by the marketing team.
+
+1. **Customers**: Place orders through the LGS web application.  
+2. **LGS Web Application**: Records all transactions in the production database.  
+3. **Transaction Database (PostgreSQL)**: Stores invoices, product details, quantities, prices, customer IDs, and countries.  
+4. **SQL Dump / Data Export**: Historical transaction data is exported for analysis without affecting the production system.  
+5. **Local PostgreSQL Instance**: Loads the SQL dump so analysis can be performed safely in a local environment.  
+6. **Python / Jupyter Notebook Analytics**: Performs data wrangling, cleaning, computations (line-item revenue, invoice totals), and RFM segmentation.  
+7. **Insights & Visualizations**: Generates histograms, boxplots, monthly trends, and customer segmentation charts.  
+8. **Marketing Team**: Uses insights to design targeted campaigns, optimize promotions, and prevent churn.  
+
+The following diagram illustrates this data flow:
+
+![LGS Data Analytics Architecture](images/architecture.png)
+
+
 ## Data Analytics and Wrangling
-[Jupyter Notebook: ./retail_data_analytics_wrangling.ipynb](./retail_data_analytics_wrangling.ipynb)
 
 The analysis performed includes:
 
