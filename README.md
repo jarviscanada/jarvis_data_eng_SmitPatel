@@ -4,9 +4,9 @@ I am a passionate and detail-oriented Software Developer with a strong foundatio
 
 ## Skills
 
-**Proficient:** Java, Linux/Bash, RDBMS/SQL, Agile/Scrum, Git
+**Proficient:** Java, Python, RDBMS/SQL, Linux/Bash, Git
 
-**Competent:** .Net/C#, Python, Angular, HTML, CSS
+**Competent:** .Net/C#, Agile/Scrum, Angular, HTML, CSS
 
 **Familiar:** Jenkins, Bootstrap, Docker, MVC, ELK Stack
 
@@ -16,6 +16,10 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_SmitPatel]
 
 
 **Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_SmitPatel/tree/master/linux_sql)]: Built a lightweight monitoring agent for a Linux system to collect hardware specifications and real-time usage metrics. Designed Bash scripts to gather CPU, memory, and disk statistics and store them in a PostgreSQL database running inside Docker. Automated periodic data collection using cron and created SQL queries to analyze system performance over time.
+
+**Core Java Apps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_SmitPatel/tree/master/core_java)]: Grep App: JavaGrep is a lightweight command-line tool inspired by Linux grep. It searches files and directories recursively for lines matching a regex and writes the results to an output file. Implemented in Core Java with standard and Lambda/Stream approaches for efficiency, using Maven, SLF4J, JUnit 5, and Docker for containerized deployment.
+
+**Python Data Analytics** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_SmitPatel/tree/master/python_data_anlytics)]: Analyzed historical transaction data for London Gift Shop (LGS) to generate actionable customer insights. Implemented data cleaning, aggregation, and RFM segmentation using Python, Pandas, NumPy, and Matplotlib/Seaborn. Data was stored and queried in PostgreSQL, and Jupyter Notebook was used for reproducible analysis. Insights enabled targeted marketing, customer retention strategies, and revenue optimization.
 
 **SQL** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_SmitPatel/tree/master/sql)]: Designed and interacted with a relational database schema to strengthen SQL skills through hands-on exercises and data modeling. Installed and configured PostgreSQL in a Docker container and connected it to DBeaver on Rocky Linux to manage and query a club membership database. Practiced writing SQL for schema design, data insertion, updates, deletions, joins, filtering, grouping, subqueries, window functions, and CTEs.
 
@@ -44,8 +48,9 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_SmitPatel]
 
 
 ## Miscellaneous
-- TODO
-- TODO
-- Cricket player
-- TODO
-- TODO
+- TCS Codevita Season 8, 2019 – cleared first round in TCS codevita global coding competition.
+- Gujarat Industrial Hackathon 2018-19: cleared the regional round and selected for the finals at PDPU University.
+- Gujarat Industrial Hackathon 2019-20: cleared the regional round and selected for the finals held at CHARUSAT.
+- Smart India Hackathon 2020 : cleared the regional round.
+- TCS Codevita Season 8, 2019 – cleared first round in TCS codevita global coding competition.
+- Infosys HackWithInfy 2020 – cleared the first round and appeared as the top 6% candidates.

@@ -35,6 +35,16 @@
       "name": "Cluster Monitor"
     },
     {
+      "description": "Grep App: JavaGrep is a lightweight command-line tool inspired by Linux grep. It searches files and directories recursively for lines matching a regex and writes the results to an output file. Implemented in Core Java with standard and Lambda/Stream approaches for efficiency, using Maven, SLF4J, JUnit 5, and Docker for containerized deployment.",
+      "git_url": "/core_java",
+      "name": "Core Java Apps"
+    },
+    {
+      "description": "Analyzed historical transaction data for London Gift Shop (LGS) to generate actionable customer insights. Implemented data cleaning, aggregation, and RFM segmentation using Python, Pandas, NumPy, and Matplotlib/Seaborn. Data was stored and queried in PostgreSQL, and Jupyter Notebook was used for reproducible analysis. Insights enabled targeted marketing, customer retention strategies, and revenue optimization.",
+      "git_url": "/python_data_anlytics",
+      "name": "Python Data Analytics"
+    },
+    {
       "description": "Designed and interacted with a relational database schema to strengthen SQL skills through hands-on exercises and data modeling. Installed and configured PostgreSQL in a Docker container and connected it to DBeaver on Rocky Linux to manage and query a club membership database. Practiced writing SQL for schema design, data insertion, updates, deletions, joins, filtering, grouping, subqueries, window functions, and CTEs.",
       "git_url": "/sql",
       "name": "SQL"
@@ -44,23 +54,14 @@
   "others": [
     {
       "bullets": [
-        "TODO"
-      ],
-      "title": "Certificates"
-    },
-    {
-      "bullets": [
-        "TODO"
+        "TCS Codevita Season 8, 2019 – cleared first round in TCS codevita global coding competition.",
+        "Gujarat Industrial Hackathon 2018-19: cleared the regional round and selected for the finals at PDPU University.",
+        "Gujarat Industrial Hackathon 2019-20: cleared the regional round and selected for the finals held at CHARUSAT.",
+        "Smart India Hackathon 2020 : cleared the regional round.",
+        "TCS Codevita Season 8, 2019 – cleared first round in TCS codevita global coding competition.",
+        "Infosys HackWithInfy 2020 – cleared the first round and appeared as the top 6% candidates."
       ],
       "title": "Awards"
-    },
-    {
-      "bullets": [
-        "Cricket player",
-        "TODO",
-        "TODO"
-      ],
-      "title": "Activities/Hobbies"
     }
   ],
   "professional_experience": [
@@ -92,7 +93,7 @@
   "skills": {
     "competent": [
       ".Net/C#",
-      "Python",
+      "Agile/Scrum",
       "Angular",
       "HTML",
       "CSS"
@@ -106,9 +107,9 @@
     ],
     "proficient": [
       "Java",
-      "Linux/Bash",
+      "Python",
       "RDBMS/SQL",
-      "Agile/Scrum",
+      "Linux/Bash",
       "Git"
     ]
   },
